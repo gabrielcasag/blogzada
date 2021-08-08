@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 
 import '@/styles/globals.scss'
+import { Header } from '@/components/Header'
 
 /*
   Componente que carrega todas as paginas do projeto
@@ -9,7 +10,12 @@ import '@/styles/globals.scss'
 */
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
