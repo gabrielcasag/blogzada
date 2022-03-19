@@ -27,16 +27,18 @@
   &:hover {
     filter: brightness(0.90);
   }
-}
 
-svg.closeIcon {
-  margin-left: 1rem;
-  background: var(--gray-800);
-  border-radius: 50%;
+  > svg.closeIcon {
+    margin-left: 1rem;
+    background: var(--gray-800);
+    color: white !important;
+    border-radius: 50%;
 
-  transition: filter 0.2s;
+    transition: all 0.2s;
 
-  &:hover {
-    filter: brightness(1.25);
+    &:hover {
+      background: var(--yellow-500);
+    }
   }
 }
+

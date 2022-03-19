@@ -45,8 +45,10 @@ export default function Home({product}: HomeProps) {
   )
 }
 
+// SSG - getStaticProps (page is cached(static) and regenerated based on revalidate)
+// SSR - getServerSideProps (page is not cached and regenerated on every request)
 export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve('price_1JUfUCIEKoqQgV8bhQ1xjWhC', {
+  const price = await stripe.prices.retrieve('price_1JMHq7AAMHcw6EAffuo8YBYC', {
     expand: ['product']
   })
 
